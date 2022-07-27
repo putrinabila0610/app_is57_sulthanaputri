@@ -13,14 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('updatedatabarangs', function (Blueprint $table) {
+        Schema::create('_updates_tables', function (Blueprint $table) {
             $table->id();
-            $table->string('kode')->unique();
-            $table->bigInteger('jeniss_id');
-            $table->string('cabang');
-            $table->string('jumlah');
-            $table->string('harga');
-
             $table->timestamps();
         });
     }
@@ -32,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('updatedatabarangs');
+        Schema::dropIfExists('_updates_tables');
     }
 };
